@@ -1,0 +1,24 @@
+.bleu{
+    background-color: skyblue;
+}
+
+.container{
+    display: flex;
+    align-content: space-between;
+}
+
+.col__1{
+    flex-grow: 1;
+}
+
+.col__2{
+    flex-grow: 2;
+}
+
+.col__3{
+    flex-grow: 3;
+}
+
+.p1{
+    padding: 10px;
+}
