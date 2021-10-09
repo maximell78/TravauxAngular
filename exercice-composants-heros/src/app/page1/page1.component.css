@@ -1,0 +1,9 @@
+div {
+    background-color: palevioletred;
+}
+
+.pad {
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+}
