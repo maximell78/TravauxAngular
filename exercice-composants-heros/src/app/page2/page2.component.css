@@ -31,3 +31,7 @@
 .element__hero {
     flex-basis: 33%;
 }
+
+.element__hero2 {
+    flex-basis: 100%;
+}

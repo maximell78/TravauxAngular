@@ -9,6 +9,7 @@ import { RechercheComponent } from './recherche/recherche.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { HeroComponent } from './hero/hero.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { Page2Component } from './page2/page2.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     RechercheComponent,
     CarouselComponent,
     HeroComponent,
-    PiedDePageComponent
+    PiedDePageComponent,
+    Page2Component
   ],
   imports: [
     BrowserModule,
