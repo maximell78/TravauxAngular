@@ -3,15 +3,23 @@
     <div class="pad">
         <app-entete></app-entete>
         <div class="container">
-            <div class="element__search pad2">
-                <app-recherche></app-recherche>
-            </div>
-            <div class="element__hero2 pad2">                        
-                <app-hero></app-hero>
-                <app-hero></app-hero>
-                <app-hero></app-hero>
-                <app-hero></app-hero>
-                <app-hero></app-hero>
+            <div class="col100">
+                <div class="container">
+                    <div class="col25">
+                        <div class="container">
+                            <div class="element__search pad2">
+                                <app-recherche></app-recherche>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col75">
+                        <div class="container">
+                            <div class="element__hero2 pad2" *ngFor="let hero of tableauHeros">                        
+                                <app-hero [hero]="hero.nom"></app-hero>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>                
         <app-pied-de-page></app-pied-de-page>

@@ -8,6 +8,10 @@
     padding-bottom: 5px;
 }
 
+.pad1 {
+    padding: 10px;
+}
+
 .pad2 {
     padding-right: 15px;
 }
@@ -30,4 +34,8 @@
 
 .element__hero {
     flex-basis: 33%;
+}
+
+span {
+    background-color: rgb(243, 217, 221);
 }

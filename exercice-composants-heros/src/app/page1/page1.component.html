@@ -9,14 +9,8 @@
             <div class="element__carousel">
                 <app-carousel></app-carousel>
                 <div class="container">
-                    <div class="element__hero pad2">                        
-                        <app-hero></app-hero>
-                    </div>
-                    <div class="element__hero pad2">                        
-                        <app-hero></app-hero>
-                    </div>
-                    <div class="element__hero">                        
-                        <app-hero></app-hero>
+                    <div class="element__hero pad2" *ngFor="let hero of tableauHeros">                        
+                        <app-hero [hero]="hero.nom"></app-hero>
                     </div>
                 </div>                
             </div>
