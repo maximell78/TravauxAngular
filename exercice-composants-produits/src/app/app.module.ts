@@ -11,6 +11,7 @@ import { DetailProduitComponent } from './detail-produit/detail-produit.componen
 import { PrixComponent } from './prix/prix.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { LienDetailsComponent } from './lien-details/lien-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LienDetailsComponent } from './lien-details/lien-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

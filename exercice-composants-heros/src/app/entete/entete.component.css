@@ -1,7 +1,15 @@
-div {
+:host {
     background-color: rgb(86, 183, 240);
 }
 
 .pad {
     padding: 10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.pl-3 {
+    padding-left: 3rem;
 }

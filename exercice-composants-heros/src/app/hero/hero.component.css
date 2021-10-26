@@ -5,3 +5,8 @@ div {
 .pad1 {
     padding: 10px;
 }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,4 +1,4 @@
-<div class="background">
+<div>
     <p class="pad3">Page 2</p>
     <div class="pad">
         <app-entete></app-entete>
@@ -6,15 +6,13 @@
             <div class="col100">
                 <div class="container">
                     <div class="col25">
-                        <div class="container">
-                            <div class="element__search pad2">
-                                <app-recherche></app-recherche>
-                            </div>
+                        <div class="element__search pad2">
+                            <app-recherche></app-recherche>
                         </div>
                     </div>
                     <div class="col75">
                         <div class="container">
-                            <div class="element__hero2 pad2" *ngFor="let hero of tableauHeros">                        
+                            <div class="element__hero2 pad2" *ngFor="let hero of tableauHeros">
                                 <app-hero [hero]="hero.nom"></app-hero>
                             </div>
                         </div>

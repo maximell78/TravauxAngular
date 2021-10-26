@@ -1,4 +1,5 @@
-.background {
+:host {
+    display: block;
     background-color: palevioletred;
 }
 
@@ -20,24 +21,21 @@
     display: flex;
 }
 
+.container2{
+    display: flex;
+    flex-direction: column;
+}
+
 .element__search {    
-    flex-basis: 45%;
-}
-
-.element__carousel {
-    flex-basis: 100%;
-}
-
-.element__hero {
-    flex-basis: 33%;
+    flex-wrap: wrap;
 }
 
 .element__hero2 {
-    flex-basis: 100%;
+    flex-direction: column;
 }
 
 .col25 {
-    flex-basis: 100%;
+    flex-basis: 25%;
 }
 
 .col75 {
