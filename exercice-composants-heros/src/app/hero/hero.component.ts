@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   @Input() hero:String ='';
+  @Input() modeAffichage='carte';
 
   constructor() { }
 

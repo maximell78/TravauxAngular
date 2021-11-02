@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Produit } from '../produit';
 
 
 @Component({
@@ -9,7 +8,6 @@ import { Produit } from '../produit';
 })
 
 export class FicheProduitComponent implements OnInit {
-  @Input() produit:Produit = {id:'0', nom:'', description:'', prix:0};
   constructor() { }
 
   ngOnInit(): void {
