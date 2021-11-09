@@ -11,8 +11,8 @@
                         </div>
                     </div>
                     <div class="col75">
-                        <div class="pad2">
-                            <app-hero-list [hero]="hero.nom" *ngFor="let hero of tableauHeros"></app-hero-list>                                
+                        <div class="pad2" *ngFor="let hero of tableauHeros">
+                            <app-hero [hero]="hero.nom"></app-hero>
                         </div>
                     </div>
                 </div>
