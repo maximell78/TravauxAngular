@@ -14,6 +14,7 @@ import { PrixComponent } from './prix/prix.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { LienDetailsComponent } from './lien-details/lien-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableauProduitsComponent } from './tableau-produits/tableau-produits.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DetailProduitComponent,
     PrixComponent,
     PiedDePageComponent,
-    LienDetailsComponent
+    LienDetailsComponent,
+    TableauProduitsComponent
   ],
   imports: [
     BrowserModule,
