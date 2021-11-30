@@ -15,6 +15,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { LienDetailsComponent } from './lien-details/lien-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableauProduitsComponent } from './tableau-produits/tableau-produits.component';
+import { QtePositivePipe } from './qte-positive.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TableauProduitsComponent } from './tableau-produits/tableau-produits.co
     PrixComponent,
     PiedDePageComponent,
     LienDetailsComponent,
-    TableauProduitsComponent
+    TableauProduitsComponent,
+    QtePositivePipe
   ],
   imports: [
     BrowserModule,

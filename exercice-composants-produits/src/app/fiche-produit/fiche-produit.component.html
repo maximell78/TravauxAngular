@@ -1,12 +1,12 @@
-<div class="container bleu">
+<div class="container bleu" *ngFor="let produit of tableauProduits  | qtePositive">
     <div class="col__1 p1">
         <app-image></app-image>
     </div>
     <div class="col__3 p1">
-        <app-detail-produit></app-detail-produit>
+        <app-detail-produit [nomFilm] = "produit.nom" [product] = "produit.description"></app-detail-produit>
     </div>
     <div class="col__2 p1">
-        <app-prix></app-prix>
+        <app-prix [prix] = "produit.prix"></app-prix>
         <app-lien-details></app-lien-details>
     </div>        
 </div>

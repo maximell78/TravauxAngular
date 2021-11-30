@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PRODUITS } from '../mock-produits';
+import { Produit } from '../produit';
 
 
 @Component({
@@ -8,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class FicheProduitComponent implements OnInit {
+  tableauProduits: Produit[] = PRODUITS;
   constructor() { }
 
   ngOnInit(): void {

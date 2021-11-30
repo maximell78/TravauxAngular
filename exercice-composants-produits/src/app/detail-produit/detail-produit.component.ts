@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DetailProduitComponent implements OnInit {
   @Input() product:String = '';
+  @Input() nomFilm:String = '';
 
   constructor() { }
 
