@@ -1,12 +1,14 @@
-<div class="container bleu" *ngFor="let produit of tableauProduits  | qtePositive">
-    <div class="col__1 p1">
-        <app-image></app-image>
-    </div>
-    <div class="col__3 p1">
-        <app-detail-produit [nomFilm] = "produit.nom" [product] = "produit.description"></app-detail-produit>
-    </div>
-    <div class="col__2 p1">
-        <app-prix [prix] = "produit.prix"></app-prix>
-        <app-lien-details></app-lien-details>
+<div class="container bleu pt-4" *ngFor="let produit of tableauProduits  | qtePositive">
+    <div class="row">
+        <div class="col-3 pb-2">
+            <app-image></app-image>
+        </div>
+        <div class="col-7 p1 pb-2">
+            <app-detail-produit [nomFilm] = "produit.nom" [product] = "produit.description"></app-detail-produit>
+        </div>
+        <div class="col-2 pb-2">
+            <app-prix [prix] = "produit.prix"></app-prix>
+            <app-lien-details></app-lien-details>
+        </div>
     </div>        
 </div>

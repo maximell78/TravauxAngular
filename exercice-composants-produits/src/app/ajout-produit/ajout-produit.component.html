@@ -1,0 +1,56 @@
+<div class="container-fluid gris">
+    <div class="row">
+        <div class="col-12 pt-3 pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nom</mat-label>
+                            <input matInput placeholder="Nom">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <input matInput placeholder="Description">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Prix $</mat-label>
+                            <input matInput placeholder="Prix">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">                        
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Catégorie</mat-label>
+                            <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                                <mat-option *ngFor="let produit of tableauProduits | async" [value]="produit">
+                                {{produit.categorie}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>                        
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Lien</mat-label>
+                            <input matInput placeholder="Lien">
+                        </mat-form-field>
+                        <div class="example-button-row">
+                            <button type="submit" mat-raised-button color="primary">Soumettre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

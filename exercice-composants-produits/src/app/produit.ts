@@ -3,5 +3,6 @@ export interface Produit {
     nom: string;
     description: string;
     prix: number,
-    qte: number
+    qte: number,
+    categorie: string
 }

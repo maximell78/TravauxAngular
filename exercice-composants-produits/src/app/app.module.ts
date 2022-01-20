@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +22,7 @@ import { LienDetailsComponent } from './lien-details/lien-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TableauProduitsComponent } from './tableau-produits/tableau-produits.component';
 import { QtePositivePipe } from './qte-positive.pipe';
+import { AjoutProduitComponent } from './ajout-produit/ajout-produit.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +36,21 @@ import { QtePositivePipe } from './qte-positive.pipe';
     PiedDePageComponent,
     LienDetailsComponent,
     TableauProduitsComponent,
-    QtePositivePipe
+    QtePositivePipe,
+    AjoutProduitComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatButtonModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
