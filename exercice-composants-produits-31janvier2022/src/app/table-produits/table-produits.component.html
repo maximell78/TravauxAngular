@@ -1,0 +1,44 @@
+<app-formulaire-produits></app-formulaire-produits>
+
+<form #produitFormAjout="ngForm" id="produitFormAjout" ngSubmit="onAdd(tableProduits, produitFormAjout)">
+    <mat-form-field class="input-full-width">
+        <input type="text" name="nom" required minlength="2" maxlength="50" [(ngModel)]="newProduit.nom" matInput #nom="ngModel" placeholder="Nouveau produit">
+        <button matSuffix  type="submit" mat-icon-button color="primary" [disabled]="!produitFormAjout.form.valid"><i class="material-icons">add</i></button>
+        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">Le nom est obligatoire.</mat-error>
+        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">Le nom doit contenir au moins 2 caractères.</mat-error>
+        <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">Le nom doit contenir au maximum 50 caractères.</mat-error>
+    </mat-form-field>
+</form>
+
+
+<table mat-table #tableHeros [dataSource]="produits">
+
+    <ng-container matColumnDef="nom">
+        <th mat-header-cell *matHeaderCellDef> Nom </th>
+        <td mat-cell *matCellDef="let produit"> {{produit.nom}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="prix">
+        <th mat-header-cell *matHeaderCellDef> Prix </th>
+        <td mat-cell *matCellDef="let produit"> {{produit.prix}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let produit" class="boutonsAction">
+            <button *ngIf="(selectedProduit && selectedProduit === hero);else editButton;" color="primary" form="produitFormEdition" mat-button><i class="material-icons">done</i></button>
+            <ng-template #editButton>
+                <form (ngSubmit)="onSelect(hero)">
+                    <button mat-button><i class="material-icons">edit</i></button>
+                </form>
+            </ng-template>
+            <form>
+                <button (click)="onDelete(produit)" mat-button><i class="material-icons">delete</i></button>
+            </form>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+
+</table>
